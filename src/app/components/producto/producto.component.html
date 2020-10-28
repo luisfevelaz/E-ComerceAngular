@@ -1,0 +1,30 @@
+<div class="container mb-5">
+    <div class="d-flex">
+        <div>
+            <img src="{{verProducto.img}}" alt="Celular">
+        </div>
+        <div class="p-3 m-1">
+            <h1>{{verProducto.model}}</h1>
+            <h3>{{verProducto.brand}}</h3>
+            <h5>$ {{verProducto.price}}</h5>
+            <div>
+                <p>Calificación: {{verProducto.rating}}</p>
+                <p>{{verProducto.description}}</p>
+            </div>
+            <div>
+                <div *ngIf="flag" class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Meses sin intereses
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" *ngFor="let msi of arrayMeses">{{msi}}</a>
+                    </div>
+                </div>
+                <button class="btn btn-success mt-5">Comprar</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h5>Gracias por tu preferencia</h5>
+    </div>
+</div>

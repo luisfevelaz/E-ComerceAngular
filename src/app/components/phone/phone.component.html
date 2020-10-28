@@ -1,12 +1,12 @@
 <h1 class="text-primary m-3">Departamento de SmartPhones</h1>
 <div class="card-columns mb-5 animated fadeIn">
-    <div class="card m-1" *ngFor="let phone of ArrayPhones; let i=index">
+    <div class="card m-1" *ngFor="let phone of ArrayPhones; let i = index">
       <img src="{{phone.img}}" class="card-img-top" alt="telefono">
       <div class="card-body">
         <h5 class="card-title">{{phone.model}}</h5>
         <p class="card-text">${{phone.price}}</p>
         <p class="card-text">Rating: {{phone.rating}}</p>
       </div>
-      <button class="btn btn-primary btn-block">Ver más</button>
+      <button (click)="Navegar(getID(i))" [routerLink]="['/producto',getID(i)]" class="btn btn-primary btn-block">Ver más</button>
     </div>
 </div>

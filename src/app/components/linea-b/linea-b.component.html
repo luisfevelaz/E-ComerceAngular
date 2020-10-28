@@ -7,6 +7,6 @@
         <p class="card-text">${{blanca.price}}</p>
         <p class="card-text">Rating: {{blanca.rating}}</p>
       </div>
-      <button class="btn btn-primary btn-block">Ver más</button>
+      <button (click)="Navegar(getID(i))" [routerLink]="['/producto',getID(i)]" class="btn btn-primary btn-block">Ver más</button>
     </div>
 </div>

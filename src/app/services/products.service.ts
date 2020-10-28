@@ -246,4 +246,26 @@ export class ProductsService {
   public getBlanca(){
     return [this.products[12],this.products[13],this.products[14],this.products[15]];
   }
+  public getProducto(id){
+      for(let i =0; i<this.products.length; i++){
+          if(this.products[i].id == id){
+            return this.products[i];
+          }
+
+      }
+  }
+  public buscaProductos(nombre){
+    //console.log(nombre);
+      
+    let found: any = [];
+    nombre = nombre.toLowerCase();
+    for (const producto of this.products){
+      const cadena= producto.model.toLowerCase();
+
+      if( cadena.indexOf(nombre) >= 0){
+        found.push(producto);
+      }
+    }
+      return found;
+  }
 }

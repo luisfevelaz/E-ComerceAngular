@@ -7,6 +7,5 @@
         <p class="card-text">${{cam.price}}</p>
         <p class="card-text">Rating: {{cam.rating}}</p>
       </div>
-      <button class="btn btn-primary btn-block">Ver más</button>
-    </div>
+      <button (click)="Navegar(getID(i))" [routerLink]="['/producto',getID(i)]" class="btn btn-primary btn-block">Ver más</button>    </div>
 </div>
