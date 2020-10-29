@@ -1,11 +1,12 @@
 <h1 class="text-primary m-3"> Departamento de Fotografía</h1>
 <div class="card-columns mb-5 animated fadeIn">
-    <div class="card m-1" *ngFor="let cam of ArrayCam; let i=index">
+    <div class="card m-1 bg-light border border-secondary rounded p-2" *ngFor="let cam of ArrayCam; let i=index">
       <img src="{{cam.img}}" class="card-img-top" alt="telefono">
       <div class="card-body">
         <h5 class="card-title">{{cam.model}}</h5>
         <p class="card-text">${{cam.price}}</p>
         <p class="card-text">Rating: {{cam.rating}}</p>
       </div>
-      <button (click)="Navegar(getID(i))" [routerLink]="['/producto',getID(i)]" class="btn btn-primary btn-block">Ver más</button>    </div>
+      <button (click)="Navegar(getID(i))" [routerLink]="['/producto',getID(i)]" class="btn btn-outline-primary btn-block mb-2">Ver más</button>
+    </div>
 </div>

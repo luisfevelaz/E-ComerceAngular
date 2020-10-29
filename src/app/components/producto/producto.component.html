@@ -1,14 +1,14 @@
 <div class="container mb-5">
     <div class="d-flex">
         <div>
-            <img src="{{verProducto.img}}" alt="Celular">
+            <img src="{{verProducto.img}}" alt="producto">
         </div>
-        <div class="p-3 m-1">
+        <div class="p-3 m-1 jumbotron">
             <h1>{{verProducto.model}}</h1>
             <h3>{{verProducto.brand}}</h3>
-            <h5>$ {{verProducto.price}}</h5>
+            <h5 class="text-primary ">$ {{verProducto.price}}</h5>
             <div>
-                <p>Calificación: {{verProducto.rating}}</p>
+                <p><b> Calificación:</b> {{verProducto.rating}}</p>
                 <p>{{verProducto.description}}</p>
             </div>
             <div>
@@ -24,7 +24,6 @@
             </div>
         </div>
     </div>
-    <div>
-        <h5>Gracias por tu preferencia</h5>
-    </div>
+    <hr class="my-4 text-primary">
+    <a [routerLink]="['/home']" class="btn btn-outline-primary btn-lg"  role="button">Ir a home</a>
 </div>

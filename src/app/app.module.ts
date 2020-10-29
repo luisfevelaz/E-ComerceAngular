@@ -12,6 +12,7 @@ import { FotografiaComponent } from './components/fotografia/fotografia.componen
 import { LineaBComponent } from './components/linea-b/linea-b.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     FotografiaComponent,
     LineaBComponent,
     ProductoComponent,
-    BuscarComponent
+    BuscarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
       {path: 'foto', component:FotografiaComponent},
       {path: 'blanca', component:LineaBComponent},
       {path: 'producto/:id', component:ProductoComponent},
-      {path: 'busqueda/:nombre',component:BuscarComponent}
+      {path: 'busqueda/:nombre',component:BuscarComponent},
+      {path: 'about', component:AboutComponent}
     ])
   ],
   providers: [],
